@@ -514,7 +514,7 @@ class XLMModel(XLMPreTrainedModel):
 
         # position_ids
         if position_ids is None:
-            position_ids = self._position_ids[:,  slen]
+            position_ids = self.position_ids[:,  slen]
         else:
             assert position_ids.size() == (bs, slen)  # (slen, bs)
             # position_ids = position_ids.transpose(0, 1)
